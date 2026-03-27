@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="🐍 Классическая игра Змейка с современным дизайном. Соберите 150 очков за 60 секунд! Управление стрелками или WASD.">
+    <meta name="keywords" content="змейка, snake game, браузерная игра, онлайн игра, аркада">
+    <meta name="author" content="Snake Game">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Open Graph / Facebook / VK / Telegram / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="🐍 Snake Game - Змейка">
+    <meta property="og:description" content="Классическая аркада с современным дизайном. Наберите 150 очков за 60 секунд! 🎮">
+    <meta property="og:image" content="images/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Snake Game">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🐍 Snake Game - Змейка">
+    <meta name="twitter:description" content="Классическая аркада с современным дизайном. Наберите 150 очков за 60 секунд! 🎮">
+    <meta name="twitter:image" content="images/preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <title>🐍 Snake Game - Змейка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>🐍 Змейка на витаминах</h1>
+    
+    <div class="rules">
+        <h2>📜 Правила игры</h2>
+        <p>Ваша задача — управлять голодной змейкой и собирать еду (красные квадраты). За каждую съеденную еду вы получаете очки и растете в размере.</p>
+        <p><strong>🎯 Цель:</strong> Набрать <span style="color: #667eea; font-weight: bold;">150 очков</span> до того, как истечет время!</p>
+        <p><strong>⌨️ Управление:</strong> Стрелки на клавиатуре ⬆️ ⬇️ ⬅️ ➡️ или WASD</p>
+        <p><strong>⚠️ Осторожно:</strong> Не врезайтесь в стены и собственный хвост!</p>
+    </div>
+    
+    <div class="container">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        
+        <div class="stats">
+            <div>⚡ Скорость: <span id="speed">150</span> мс</div>
+            <div>📏 Размер: <span id="size">1</span></div>
+            <div>🏆 Очки: <span id="points">0</span></div>
+            <div>⏰ Время: <span id="timer">01:00</span></div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button onclick="startGame()">▶️ Начать игру</button>
+        <button onclick="pauseGame()">⏸️ Пауза</button>
+        <button onclick="resetGame()">🔄 Перезапустить</button>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
